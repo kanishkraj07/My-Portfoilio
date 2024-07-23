@@ -1,0 +1,344 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Geist Regular';
+  src: local("Geist-Regular");
+  src: url('/src/fonts/Geist-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Geist Medium';
+  src: local("Geist-medium");
+  src: url('/src/fonts/Geist-Medium.ttf') format('truetype');
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Geist Regular';
+  font-variation-settings: "slnt" 0, "wght" 500;  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1A1919;
+  padding-top: 4em;  
+}
+
+:root {
+  --main-color: aqua;
+  width: 100%;
+  height: 100%; 
+}
+
+.active {
+  color: white;
+}
+
+/* "0 0 25px transparent */
+
+.home-img img {
+  position: absolute;
+  left: 40rem;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* img:hover {
+  box-shadow: 0 0 25px #0284c7;
+} */
+
+.icoo  :hover{
+  /* box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color); */
+}
+.first:hover{
+  color: var(--main-color);
+  cursor: pointer;
+
+}
+.second:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.text{
+  transition: transform 0.2s ease-in-out;
+}
+.education{
+  padding: 100px 15px;
+  background: var(--second-bg-color);
+}
+.education h2{
+  margin-bottom: 5rem;
+}
+.timeline-items{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.timeline-items::before{
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: white;
+  left:calc(50% - 1px);
+}
+.timeline-item{
+  margin-bottom: 2em;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child{
+  margin-bottom: 2rem;
+}
+
+.timeline-item:nth-child(odd){
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even){
+  padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  box-shadow: 0 0 25px #60a5fa,
+              0 0 50px #60a5fa;
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 40px;
+}
+.timeline-date{
+  font-size: 1em;
+  font-weight: 400;
+  color: white;
+  margin: 35px 0 15px;
+}
+
+.timeline-content{
+  border: 2px solid rgba(255,255,255,0.8);
+  padding: 30px 50px;
+  border-radius: 2em;
+  /* box-shadow: 0 0 8px #60a5fa; */
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.timeline-content:hover{
+  transform: scale(1);
+  box-shadow: 0 0 20px white;
+}
+.timeline-content h3{
+  font-size: 20px;
+  color: white;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+.timeline-content p{
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(255,255,255,0.5)
+}
+
+
+
+.container1{
+  width: 600px;
+  height: 500px;
+  padding: 75px 90px;
+  margin-left: 120px;
+}
+.heading1{
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+}
+.heading{
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+}
+.bar {
+  font-size: 23px;
+
+}
+.bar:hover{
+  color: var(--main-color);
+  cursor: pointer;
+
+}
+
+.technical-bars .bar {
+  margin: 40px 0;
+}
+
+.technical-bars .bar:first-child {
+  margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+  margin-bottom: 0;
+}
+
+.technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+
+}
+
+.technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #000000;
+  animation: animate 1s cubic-bezier(1,0,0,1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes animate {
+  100% {
+      transform: scaleX(1);
+  }
+}
+
+.technical-bars .bar .progress-line span {
+  height: 100%;
+  background-color: #0ef;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s 1s cubic-bezier(1,0,0,1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.progress-line.html span {
+  width: 90%;
+}
+
+.progress-line.css span {
+  width: 80%;
+}
+
+.progress-line.javascript span {
+  width: 70%;
+}
+
+.progress-line.react span {
+  width: 75%;
+}
+
+.progress-line.mongodb span {
+  width: 60%;
+}
+
+.progress-line.sql span {
+  width: 65%;
+}
+
+.progress-line.nodejs span {
+  width: 70%;
+}
+
+.progress-line.expressjs span {
+  width: 65%;
+}
+
+.progress-line.bootstrap span {
+  width: 80%;
+}
