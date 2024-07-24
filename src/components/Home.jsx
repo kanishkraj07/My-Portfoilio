@@ -7,6 +7,7 @@ import { Link as ScrollLink, Element } from 'react-scroll';
 import Experience from './Experience';
 import Education from './Education';
 import { BluetoothIcon, Facebook, Github, Linkedin, Twitter } from 'lucide-react';
+import ShimmerButton from './magicui/shimmer-button';
 
 
 export default function Home() {
@@ -65,7 +66,7 @@ export default function Home() {
             <a href="https://instagram.com" className='text-white border-2 border-[#1f1f1f] rounded-full hover:border-slate-300 size-14 flex justify-center items-center' >
               <Twitter size={25} strokeWidth='1px' fill='white' />
             </a>
-            <button className='px-3 py-2 bg-slate-300 text-black text-sm border rounded-full font-primaryMedium self-center'>View & Download Resume</button>
+            <ShimmerButton className='bg-slate-300'><span className='font-primaryMedium tracking-tight'>View & Download Resume</span></ShimmerButton>
         </div>
       </div>
       <img className='size-80 object-cover rounded-full' src={mypic} alt="kanishk Image"/>
