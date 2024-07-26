@@ -57,7 +57,7 @@ const particlesLoaded = useCallback(async container => {
                         },
                         repulse: {
                             distance: 200,
-                            duration: 0.4,
+                            duration: 0.5,
                         },
                     },
                 },
@@ -90,7 +90,7 @@ const particlesLoaded = useCallback(async container => {
                         value: 80,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 0.6,
                     },
                     shape: {
                         type: "circle",

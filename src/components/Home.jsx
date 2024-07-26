@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Typed from 'typed.js';
 import mypic from './mypic.jpg';
 import Skills from './Skills';
@@ -6,11 +6,14 @@ import Projects from './Projects';
 import { Link as ScrollLink, Element } from 'react-scroll';
 import Experience from './Experience';
 import Education from './Education';
-import { BluetoothIcon, Facebook, Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Menu as MenuIcon, Twitter } from 'lucide-react';
 import ShimmerButton from './magicui/shimmer-button';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Home() {
+  const [openMenu, setOpenMenu] = useState(false);
   // useEffect(() => {
   //   const typed = new Typed(".text", {
   //     strings: ["Software Engineer 2", "Fullstack Engineer"],
@@ -25,18 +28,31 @@ export default function Home() {
   //   };
   // }, []);
 
-  return (<div className='w-full'>
-  <nav className="w-full fixed h-[4em] top-0 bg-[rgba(0,0,0,0.9)] border-b border-b-[#1f1f1f] p-5 z-[9999]">
-        <div className='grid grid-cols-2 text-white'>
-          <div>
+  return (<div className='w-full pb-10'>
+  <nav className="w-full fixed h-[4em] top-0 bg-black border-b border-b-[#1f1f1f] p-5 z-[9999]">
+        <div className='grid grid-cols-12 text-white'>
+          <div className='col-span-2'>
             <a className='text-xl font-primaryMedium'><b>Portfolio</b></a>
           </div>
-          <div className="flex items-center justify-center gap-10">
+          <div className="hidden col-span-10 sm:flex items-center justify-center gap-10 place-self-end">
             <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="home-section" smooth={true} duration={500} offset={0}><b>Home</b></ScrollLink>
             <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="skills-section" smooth={true} duration={500} offset={650} >Skills</ScrollLink>
             <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="experi-section" smooth={true} duration={500} offset={2050} >Experience</ScrollLink>
             <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to='designs-section' smooth={true} duration={500} offset={2550}>Designs</ScrollLink>
             <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to='projects-section' smooth={true} duration={500} offset={2550}>Projects</ScrollLink>
+          </div>
+          <div className='reltive col-span-10 cursor-pointer sm:hidden justify-self-end self-center'>
+            <button  onClick={() => setOpenMenu(!openMenu)}><MenuIcon /></button>
+
+            {
+              openMenu && <div className='bg-[#282828] divide-y divide-[rgba(255,255,255,0.3)] absolute top-[80%] right-[2em] flex flex-col rounded-lg'>
+               <div className='p-2 px-9 text-center rounded-lg rounded-br-none rounded-bl-none hover:bg-[#424242]'> <ScrollLink className='text-base  text-[#e9e9e9] cursor-pointer font-light ' to="home-section" smooth={true} duration={500} offset={0}><b>Home</b></ScrollLink></div>
+               <div className='p-2 px-9 text-center  hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="skills-section" smooth={true} duration={500} offset={650}><b>Skills</b></ScrollLink></div>
+               <div className='p-2 px-9 text-center  hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="experi-section" smooth={true} duration={500} offset={2050}><b>Experience</b></ScrollLink></div>
+               <div className='p-2 px-9 text-center  hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="designs-section" smooth={true} duration={500} offset={2550}><b>Designs</b></ScrollLink></div>
+               <div className='p-2 px-9 text-center rounded-lg rounded-tl-none rounded-tr-none hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="projects-section" smooth={true} duration={500} offset={2550}><b>Projects</b></ScrollLink></div>
+              </div>
+            }
           </div>
         </div>
   </nav>
@@ -67,7 +83,7 @@ export default function Home() {
               <Twitter size={25} strokeWidth='1px' fill='white' />
             </a>
 
-            <a href="My_Resume.pdf" download="Kanishk Mogalraj Resume'"><ShimmerButton className='bg-slate-300 py-5'><span className='font-primaryMedium leading-none tracking-tight'>View & Download Resume</span></ShimmerButton></a>
+            <a href="My_Resume.pdf" download="Kanishk Mogalraj Resume'"><ShimmerButton shimmerSize={'0.09em'} className='py-5'><span className='font-primaryMedium leading-none tracking-tight'>Checkout Resume</span></ShimmerButton></a>
         </div>
       </div>
       <img className='size-80  object-cover rounded-full' src={mypic} alt="kanishk Image"/>
