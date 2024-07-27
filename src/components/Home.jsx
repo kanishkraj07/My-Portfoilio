@@ -34,7 +34,7 @@ export default function Home() {
           <div className='col-span-2'>
             <a className='text-xl font-primaryMedium'><b>Portfolio</b></a>
           </div>
-          <div className="hidden col-span-10 sm:flex items-center justify-center gap-10 place-self-end">
+          <div className="hidden col-span-10 sm:flex items-center justify-center gap-10 place-self-end pr-5">
             <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="home-section" smooth={true} duration={500} offset={0}><b>Home</b></ScrollLink>
             <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="skills-section" smooth={true} duration={500} offset={650} >Skills</ScrollLink>
             <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="experi-section" smooth={true} duration={500} offset={2050} >Experience</ScrollLink>
