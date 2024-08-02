@@ -10,6 +10,7 @@ import { Github, Linkedin, Menu as MenuIcon, Twitter } from 'lucide-react';
 import ShimmerButton from './magicui/shimmer-button';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { faL } from '@fortawesome/free-solid-svg-icons';
+import Designs from './Designs';
 
 
 export default function Home() {
@@ -86,15 +87,15 @@ export default function Home() {
             <a href="My_Resume.pdf" download="Kanishk Mogalraj Resume'"><ShimmerButton shimmerSize={'0.09em'} className='py-5'><span className='font-primaryMedium leading-none tracking-tight'>Checkout Resume</span></ShimmerButton></a>
         </div>
       </div>
-      <img className='size-80  object-cover rounded-full' src={mypic} alt="kanishk Image"/>
+      <img className='size-80 border-2 object-cover rounded-full' src={mypic} alt="kanishk Image"/>
     </div>
   </Element>
 
-<div className='px-10'>
+<div className='px-10 mt-5 md:mt-0'>
   <Element name="skills-section"><Skills /></Element>
+  <Element name='designs-section'><Designs /></Element>
   <Education />
   <Element name='experi-section' ><Experience/></Element>
-  <Element name='designs-section'></Element>
   <Element name='projects-section'><Projects/></Element>
 </div>
 </div>
