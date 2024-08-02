@@ -73,14 +73,14 @@ export default function Home() {
           </div>
 
           <div className='flex justify-start items-start gap-3 mt-5'>
-            <a className='text-white border-2 border-[#1f1f1f] rounded-full size-14 flex justify-center items-center hover:border-slate-300' href="https://www.linkedin.com/in/kanishk777/">
+            <a className='text-white border-2 border-[#1f1f1f] rounded-full size-14 flex justify-center items-center hover:border-slate-300' href="https://www.linkedin.com/in/kanishk777/" target='_blank' >
               <Linkedin size={25} strokeWidth='1px' fill='white' />
             </a>
-            <a href="https://github.com/kanishkraj07" className='text-white border-2 border-[#1f1f1f] hover:border-slate-300 rounded-full size-14 flex justify-center items-center' >
+            <a href="https://github.com/kanishkraj07" target='_blank' className='text-white border-2 border-[#1f1f1f] hover:border-slate-300 rounded-full size-14 flex justify-center items-center' >
               <Github size={25} strokeWidth='1px' fill='white' />
             </a>
           
-            <a href="https://x.com/raj_kanishk_" className='text-white border-2 border-[#1f1f1f] rounded-full hover:border-slate-300 size-14 flex justify-center items-center' >
+            <a href="https://x.com/raj_kanishk_" target='_blank' className='text-white border-2 border-[#1f1f1f] rounded-full hover:border-slate-300 size-14 flex justify-center items-center' >
               <Twitter size={25} strokeWidth='1px' fill='white' />
             </a>
 
