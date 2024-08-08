@@ -84,7 +84,7 @@ export default function Home() {
               <Twitter size={25} strokeWidth='1px' fill='white' />
             </a>
 
-            <a href="My_Resume.pdf" download="Kanishk Mogalraj Resume'"><ShimmerButton shimmerSize={'0.09em'} className='py-5'><span className='font-primaryMedium leading-none tracking-tight'>Checkout Resume</span></ShimmerButton></a>
+            <a href="Kanishk_Mogalraj_Resume.pdf" download="Kanishk Mogalraj Resume'"><ShimmerButton shimmerSize={'0.09em'} className='py-5'><span className='font-primaryMedium leading-none tracking-tight'>Checkout Resume</span></ShimmerButton></a>
         </div>
       </div>
       <img className='size-80 border-2 object-cover rounded-full' src={mypic} alt="kanishk Image"/>

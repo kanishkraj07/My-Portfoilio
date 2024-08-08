@@ -1,4 +1,5 @@
 import react from './assets/skillLogo/react.svg'
+import nextjs from './assets/skillLogo/nextjs.svg'
 import angular from './assets/skillLogo/angular.svg'
 import aws from './assets/skillLogo/aws.svg'
 import bootstrap from './assets/skillLogo/bootstrap.svg'
@@ -31,6 +32,7 @@ import websocket from './assets/skillLogo/websocket.svg'
 
 export const SKILLS_LIST = [
     {name: 'React.js', icon: react},
+    {name: 'Next.js', icon: nextjs},
     {name: 'Recoil.js', icon: recoil},
     {name: 'Angular.js', icon: angular},
     {name: 'Typescript', icon: typescript},
