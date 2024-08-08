@@ -13,7 +13,7 @@ export default function Education() {
                       <h3>Lovely Professional University, Jalandhar</h3>
                       <p>B.Tech in Computer Science and Engineering - 7.69 CGPA</p>
                     </div>     
-                </div>
+              </div>
             </div>
         </section>
     </div>
