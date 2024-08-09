@@ -11,6 +11,7 @@ import ShimmerButton from './magicui/shimmer-button';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { faL } from '@fortawesome/free-solid-svg-icons';
 import Designs from './Designs';
+import '../App.css';
 
 
 export default function Home() {
@@ -36,22 +37,22 @@ export default function Home() {
             <a className='text-xl font-primaryMedium'><b>Portfolio</b></a>
           </div>
           <div className="hidden col-span-10 sm:flex items-center justify-center gap-10 place-self-end pr-5">
-            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="home-section" smooth={true} duration={500} offset={0}><b>Home</b></ScrollLink>
-            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="skills-section" smooth={true} duration={500} offset={650} >Skills</ScrollLink>
-            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="experi-section" smooth={true} duration={500} offset={2050} >Experience</ScrollLink>
-            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to='designs-section' smooth={true} duration={500} offset={2550}>Designs</ScrollLink>
-            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to='projects-section' smooth={true} duration={500} offset={2550}>Projects</ScrollLink>
+            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="home-section"  activeClassName='active' spy={true} smooth={true} duration={500} offset={-100}><b>Home</b></ScrollLink>
+            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="skills-section" activeClassName='active' spy={true} smooth={true} duration={500} offset={-100} >Skills</ScrollLink>
+            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="designs-section" activeClassName='active' spy={true} smooth={true} duration={500} offset={-100} >Designs</ScrollLink>
+            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to='experi-section' activeClassName='active' spy={true} smooth={true} duration={500} offset={-100}>Experience</ScrollLink>
+            <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to='projects-section' activeClassName='active' spy={true} smooth={true} duration={500} offset={-100}>Projects</ScrollLink>
           </div>
           <div className='reltive col-span-10 cursor-pointer sm:hidden justify-self-end self-center'>
             <button  onClick={() => setOpenMenu(!openMenu)}><MenuIcon /></button>
 
             {
               openMenu && <div className='bg-[#282828] divide-y divide-[rgba(255,255,255,0.3)] absolute top-[80%] right-[2em] flex flex-col rounded-lg'>
-               <div className='p-2 px-9 text-center rounded-lg rounded-br-none rounded-bl-none hover:bg-[#424242]'> <ScrollLink className='text-base  text-[#e9e9e9] cursor-pointer font-light ' to="home-section" smooth={true} duration={500} offset={0}><b>Home</b></ScrollLink></div>
-               <div className='p-2 px-9 text-center  hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="skills-section" smooth={true} duration={500} offset={650}><b>Skills</b></ScrollLink></div>
-               <div className='p-2 px-9 text-center  hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="experi-section" smooth={true} duration={500} offset={2050}><b>Experience</b></ScrollLink></div>
-               <div className='p-2 px-9 text-center  hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="designs-section" smooth={true} duration={500} offset={2550}><b>Designs</b></ScrollLink></div>
-               <div className='p-2 px-9 text-center rounded-lg rounded-tl-none rounded-tr-none hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="projects-section" smooth={true} duration={500} offset={2550}><b>Projects</b></ScrollLink></div>
+               <div className='p-2 px-9 text-center rounded-lg rounded-br-none rounded-bl-none hover:bg-[#424242]'> <ScrollLink className='text-base  text-[#e9e9e9] cursor-pointer font-light ' to="home-section" smooth={true} duration={500} offset={-100}><b>Home</b></ScrollLink></div>
+               <div className='p-2 px-9 text-center  hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="skills-section" smooth={true} duration={500} offset={-100}><b>Skills</b></ScrollLink></div>
+               <div className='p-2 px-9 text-center  hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="designs-section" smooth={true} duration={500} offset={-100}><b>Designs</b></ScrollLink></div>
+               <div className='p-2 px-9 text-center  hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="experi-section" smooth={true} duration={500} offset={-100}><b>Experience</b></ScrollLink></div>
+               <div className='p-2 px-9 text-center rounded-lg rounded-tl-none rounded-tr-none hover:bg-[#424242]'> <ScrollLink className='text-base text-[#e9e9e9] cursor-pointer font-light ' to="projects-section" smooth={true} duration={500} offset={-100}><b>Projects</b></ScrollLink></div>
               </div>
             }
           </div>
