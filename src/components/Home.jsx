@@ -34,7 +34,8 @@ export default function Home() {
   <nav className="w-full fixed h-[4em] top-0 bg-black border-b border-b-[#1f1f1f] p-5 z-[9999]">
         <div className='grid grid-cols-12 text-white'>
           <div className='col-span-2'>
-            <a className='text-xl font-primaryMedium'><b>Portfolio</b></a>
+            <a className='text-xl font-primaryMedium'> <ScrollLink className='text-white cursor-pointer' to="home-section"  activeClassName='active' spy={true} smooth={true} duration={500} offset={-100}>
+            <b>Portfolio</b></ScrollLink></a>
           </div>
           <div className="hidden col-span-10 sm:flex items-center justify-center gap-10 place-self-end pr-5">
             <ScrollLink className='text-base text-white cursor-pointer font-light hover:text-primary-blue' to="home-section"  activeClassName='active' spy={true} smooth={true} duration={500} offset={-100}><b>Home</b></ScrollLink>
