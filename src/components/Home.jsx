@@ -68,7 +68,7 @@ export default function Home() {
           <h3 className='text-white text-2xl mt-2'>I'm a <span className="text text-white font-primaryMedium">Full Stack Engineer</span></h3>
           <div className='text-white text-md mt-5'>
             <span className='break-words'>I'm a tech enthusiast, and my toolkit includes
-            vibrant front-end technologies like React, Typescript,
+            vibrant front-end technologies like Next.js, React, Recoil, Angular, Typescript,
             Javascript, and Tailwind CSS, <br className='hidden lg:block' /> paired with the
             solid back-end combo of Express.js and Node.js
             </span>

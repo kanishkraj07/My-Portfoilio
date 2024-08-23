@@ -29,6 +29,9 @@ import tailwindcss from './assets/skillLogo/tailwindcss.svg'
 import typescript from './assets/skillLogo/typescript.svg'
 import vercel from './assets/skillLogo/vercel.png'
 import websocket from './assets/skillLogo/websocket.svg'
+import shadcn from './assets/skillLogo/shadcn.jpg'
+import mui from './assets/skillLogo/mui.svg'
+ 
 
 export const SKILLS_LIST = [
     {name: 'React.js', icon: react},
@@ -37,6 +40,8 @@ export const SKILLS_LIST = [
     {name: 'Angular.js', icon: angular},
     {name: 'Typescript', icon: typescript},
     {name: 'TailwindCSS', icon: tailwindcss},
+    {name: 'Shadcn UI', icon: shadcn},
+    {name: 'Material UI', icon: mui},
     {name: 'Bootstrap', icon: bootstrap},
     {name: 'Javascript', icon: javascript},
     {name: 'HTML5', icon: html5},
