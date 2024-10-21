@@ -69,7 +69,7 @@ export default function Home() {
           <div className='text-white text-md mt-5'>
             <span className='break-words'>I'm a tech enthusiast, and my toolkit includes
             vibrant front-end technologies like Next.js, React, Recoil, Angular, Typescript,
-            Javascript, and Tailwind CSS, <br className='hidden lg:block' /> paired with the
+            Javascript, and Tailwind CSS, <span className='hidden lg:block' /> paired with the
             solid back-end combo of Express.js and Node.js
             </span>
           </div>
