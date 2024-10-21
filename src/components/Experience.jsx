@@ -11,12 +11,12 @@ export default function Experience() {
             </div>
               <div className="timeline-content">
                 <p>Part of the Platforms - Carriers, Agents and Agencies <br />
-                    <p className='pl-5 mt-2'>• Developed a language preference feature , enabling agents and
-                    agencies to share their preferred languages with carriers, enhancing
-                    multilingual communication using Angular17 and SpringBoot Java. <br /> <br />
-                    • Implemented configuration rules to restrict agents and agencies
-                    from sharing language preferences resulted in allowing carriers to
-                    manage data sharing and enhance security via permission controls <br /> <br /> <span className='text-lg'>Technologies used: Angular 17, SpringBoot</span>
+                    <p className='pl-5 mt-2'>• Built a robust language preference feature with dynamic UI and APIs, allowing agents to save and share their
+                    preferred language, enhancing multilingual communication and user experience. <br /> <br />
+                    • Developed a reusable task reminders feature UI in under 5 days, which can send timely notifications to various
+                    associated features, enabling others to integrate their new features instantly and reducing their work by 10 days. <br /> <br />
+                    • Implemented a carrier questionnaire feature that enables carriers to create and share custom questions during
+                    onboarding new agents, leading to a 70% reduction in manual effort for 1 team.
                     </p>
                   </p>
               </div> 
