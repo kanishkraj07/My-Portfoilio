@@ -17,6 +17,10 @@ export default function Projects() {
                 <p className='mt-3'>• Engineered a Real-time chat application with Google and
                     GitHub OAuth 2.0 authentication, featuring global search for friend
                     connections, Notifications, and dedicated chat and group management pages. <br /> <br />
+                    • Peer-to-Peer connection: Integrated a video calling feature with WebRTC, maintaining 30 FPS video transfer.
+                    <br /> <br />
+                    • Configured a signaling server using Node.js and WebSockets (WS) for real-time communication. <br /> <br />
+                    • Utilized Recoil.js for state management, leading to a 30% reduction in page loading time. <br /> <br />
                     • Achieved 1ms latency per request by using Redis for in-memory caching. <br /> <br />
                     • Integrated worker servers with messaging queues and pub/subs for event
                     broadcasting, which can be easily scaled to 1 million users.
